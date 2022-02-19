@@ -1,6 +1,5 @@
 .header {
 	height: 66px;
-	background: white;
 	font-family: "ptsans_bold", serif;
 	&__inner {
 		height: 100%;
@@ -23,21 +22,28 @@
 			font-size: 20px;
 			height: 100%;
 			border-bottom: 2px solid rgba(75, 62, 57, 0);
+			transform: scale(1);
 			border-top: 2px solid;
-			transition: border-bottom 500ms;
+			transition: all 1s;
+			&:hover {
+				transform: scale(1.05);
+				transition: transform 250ms;
+			}
 		}
 		.active {
 			border-bottom: 2px solid rgba(75, 62, 57, 1);
 			border-top: 2px solid;
-			opacity: 1;
-			transition: border-bottom 500ms;
+			transform: scale(1.05);
+			transition: all 250ms;
 		}
 	}
 	&__pictures {
 		position: relative;
 		cursor: pointer;
 		&__wrapper {
+			width: 60px;
 			display: flex;
+			justify-content: space-between;
 		}
 		&__alert {
 			position: absolute;
@@ -49,7 +55,7 @@
 			right: -16px;
 			border-radius: 50%;
 			background-color: #7db54f;
-			color: white;
+			color: #fff;
 			width: 20px;
 			height: 20px;
 			font-size: 10px;
@@ -63,7 +69,7 @@
 		width: 160px;
 		background: #756257;
 		border-radius: 4px;
-		color: white;
+		color: #fff;
 		cursor: pointer;
 	}
 }

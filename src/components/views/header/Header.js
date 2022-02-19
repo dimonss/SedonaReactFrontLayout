@@ -11,7 +11,7 @@ const imagesList = [
 ];
 const Nav = ({ list, activePage, setActivePage }) =>
 	list.map((item, index) => (
-		<div key={index} className={`header__navbar__item${activePage === index ? " active": ""}`} onClick={() => setActivePage(index)}>
+		<div key={index} className={`header__navbar__item${activePage === index ? " active" : ""}`} onClick={() => setActivePage(index)}>
 			{item}
 		</div>
 	));
@@ -33,7 +33,7 @@ const Header = () => {
 				</div>
 				<div className="header__navbar">{<Nav list={navbarList} activePage={activePage} setActivePage={setActivePage} />}</div>
 				<div className="header__pictures__wrapper">{<Pictures list={imagesList} />}</div>
-				<div className="header__button">{stringsRU.i_want_to_go_there.toUpperCase()}</div>
+				<div className="header__button">{stringsRU.i_want_to_go_there}</div>
 			</div>
 		</div>
 	);
