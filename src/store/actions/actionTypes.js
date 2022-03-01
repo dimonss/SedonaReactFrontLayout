@@ -1,0 +1,2 @@
+//ui
+export const SET_MODAL_WINDOW_OPEN = "SET_MODAL_WINDOW_OPEN";
