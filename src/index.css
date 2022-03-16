@@ -3,9 +3,25 @@ body {
 	font-family: "ptsans_regular", serif;
 	background: #e5e5e5;
 }
-.page {
+.app {
 	margin: 0 auto;
 	max-width: 1200px;
 	background: #fff;
 	user-select: none;
+}
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
 }

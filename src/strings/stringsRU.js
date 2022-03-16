@@ -1,7 +1,7 @@
 const stringsRU = {
 	main: "Главная",
 	about_sedona: "О Седоне",
-	hotel: "Гостиница",
+	hotels: "Гостиницы",
 	i_want_to_go_there: "Хочу туда!",
 	top_banner_title: "Седона — небольшой городок в Аризоне,\n" + "заслуживающий большего!",
 	top_banner_subtitle: "Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!",
@@ -31,6 +31,11 @@ const stringsRU = {
 	subscribe: "Подписаться",
 	myPhoneNumber: "996705550511",
 	myPhoneNumberView: "+996 705 55-05-11",
+	arrival_data: "Дата заезда:",
+	departure_data: "Дата выезда:",
+	adults: "Взрослые",
+	children: "Дети",
+	find: "Найти",
 };
 
 export default stringsRU;

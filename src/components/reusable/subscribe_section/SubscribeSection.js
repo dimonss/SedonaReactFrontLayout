@@ -1,7 +1,7 @@
 import React from "react";
 import stringsRU from "../../../strings/stringsRU";
 import "./subscribe_section.scss";
-import InputWithButton from "../../reusable/inputs/InputWithButton";
+import InputWithButton from "../inputs/InputWithButton";
 
 const SubscribeSection = () => {
 	return (

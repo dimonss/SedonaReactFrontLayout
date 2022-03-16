@@ -6,8 +6,8 @@ import souvenirLogo from "../../../images/main_page/suvenir.svg";
 import canyonImg from "../../../images/main_page/canyon.png";
 import houseImg from "../../../images/main_page/house.png";
 import stringsRU from "../../../strings/stringsRU";
-import SearchHotelSection from "../../reusable/searchHotelBar/SearchHotelSection";
-import SubscribeSection from "../subscribe_section/SubscribeSection";
+import SearchHotelSection from "./searchHotelSection/SearchHotelSection";
+import SubscribeSection from "../../reusable/subscribe_section/SubscribeSection";
 
 const CellWithImage = ({ image, title, subtitle, bgOpacity }) => (
 	<div className="cell__with-image" style={{ "--opacity": bgOpacity }}>
@@ -38,16 +38,22 @@ const ImageCell = ({ image }) => (
 );
 
 const HomePage = () => {
-	const dataForCellWithImage = useMemo(() => [
-		{ image: housingLogo, title: stringsRU.housing, subtitle: stringsRU.housing_description, bgOpacity: 0.12 },
-		{ image: burgerLogo, title: stringsRU.food, subtitle: stringsRU.food_description, bgOpacity: 0 },
-		{ image: souvenirLogo, title: stringsRU.souvenir, subtitle: stringsRU.souvenir_description, bgOpacity: 0.12 },
-	]);
-	const dataForCell = useMemo(() => [
-		{ number: 3, title: stringsRU.small_area, subtitle: stringsRU.all_attractions_are_very_close, bgOpacity: 0.12 },
-		{ number: 4, title: stringsRU.beautiful_road, subtitle: stringsRU.traveling_to_sedona, bgOpacity: 0.2 },
-		{ number: 5, title: stringsRU.few_tourists, subtitle: stringsRU.most_go_to_grand_canyon, bgOpacity: 0.12 },
-	]);
+	const dataForCellWithImage = useMemo(
+		() => [
+			{ image: housingLogo, title: stringsRU.housing, subtitle: stringsRU.housing_description, bgOpacity: 0.12 },
+			{ image: burgerLogo, title: stringsRU.food, subtitle: stringsRU.food_description, bgOpacity: 0 },
+			{ image: souvenirLogo, title: stringsRU.souvenir, subtitle: stringsRU.souvenir_description, bgOpacity: 0.12 },
+		],
+		[]
+	);
+	const dataForCell = useMemo(
+		() => [
+			{ number: 3, title: stringsRU.small_area, subtitle: stringsRU.all_attractions_are_very_close, bgOpacity: 0.12 },
+			{ number: 4, title: stringsRU.beautiful_road, subtitle: stringsRU.traveling_to_sedona, bgOpacity: 0.2 },
+			{ number: 5, title: stringsRU.few_tourists, subtitle: stringsRU.most_go_to_grand_canyon, bgOpacity: 0.12 },
+		],
+		[]
+	);
 	return (
 		<div className="main-page">
 			<div className="main-page-inner">
