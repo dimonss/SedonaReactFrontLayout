@@ -36,6 +36,14 @@ const stringsRU = {
 	adults: "Взрослые",
 	children: "Дети",
 	find: "Найти",
+	sedona_hotels: "Гостинницы Седоны",
+	apply: "Применить",
+	reset: "Сбросить",
+	cost: "Стоимость",
+	infrastructure: "Инфраструктура",
+	hotel_type: "Тип жилья",
+	from: "От",
+	to: "До",
 };
 
 export default stringsRU;

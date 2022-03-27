@@ -9,6 +9,7 @@ import SearchModalWindow from "./modal_windows/SearchModalWindow";
 import urls from "../urls";
 import About from "./views/about/About";
 import SubscribeSection from "./reusable/subscribe_section/SubscribeSection";
+import ToastStore from "./views/toastStore/ToastStore";
 
 const App = () => (
 	<div className="app">
@@ -46,6 +47,7 @@ const App = () => (
 		</Routes>
 		<Footer />
 		<SearchModalWindow />
+		<ToastStore />
 	</div>
 );
 

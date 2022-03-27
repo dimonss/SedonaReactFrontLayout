@@ -1,2 +1,3 @@
 //ui
 export const SET_MODAL_WINDOW_OPEN = "SET_MODAL_WINDOW_OPEN";
+export const SET_TOAST_STORE = "SET_TOAST_STORE";

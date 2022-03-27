@@ -11,6 +11,7 @@ import TextField from "@mui/material/TextField";
 import { DesktopDatePicker } from "@mui/lab";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import urls from "../../urls";
 
 const SearchModalWindow = () => {
 	const modalWindowIsOpen = useSelector((store) => store?.ui?.modalWindowIsOpen);
@@ -18,7 +19,7 @@ const SearchModalWindow = () => {
 	const dispatchCloseModalWindow = useCallback(() => dispatch(toggleModalWindow(false)), [dispatch]);
 	const navigate = useNavigate();
 	const getResult = useCallback(() => {
-		navigate("/hotels", { state: { arrival_data, departure_data, amountOfAdults, amountOfChildren } });
+		navigate(urls.HOTELS, { state: { arrival_data, departure_data, amountOfAdults, amountOfChildren } });
 		dispatchCloseModalWindow();
 	}, []);
 	const [arrival_data, setArrival_data] = useState(new Date());
