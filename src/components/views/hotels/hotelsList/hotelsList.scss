@@ -1,0 +1,249 @@
+.hotels-list {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&__inner {
+		width: 86%;
+	}
+	&__config-bar {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin: 44px 0;
+		&__counter {
+			margin-left: 20px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 39px;
+			text-transform: uppercase;
+		}
+		&__sort {
+			width: 288px;
+		}
+
+		&__display-mode {
+			display: flex;
+			width: 160px;
+			justify-content: space-between;
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 44px;
+				width: 44px;
+				border: 2px solid #e6e6e6;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			.active {
+				border: 2px solid #000;
+				cursor: initial;
+			}
+		}
+	}
+	&__item {
+		&__container {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 34px;
+		}
+	}
+	&__get-more {
+		display: flex;
+		justify-content: center;
+		padding: 30px 0 30px 0;
+		border-top: 1px solid #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		button {
+			color: white;
+			background-color: #83b3d3;
+			width: 50%;
+			height: 60%;
+			font-family: ptsans_regular, serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 58px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	}
+	&__pagination {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px 0 30px 0;
+		}
+
+		&__buttons {
+			display: flex;
+			& > div {
+				width: 55px;
+				height: 55px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 20px;
+				font-weight: 700;
+				margin-right: 8px;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: transform 250ms;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover{
+					transform: scale(1.2);
+				}
+				&:active{
+					transform: scale(1);
+				}
+			}
+		}
+		&__amount{
+			display: flex;
+			align-items: center;
+			& > :first-child{
+				margin-right: 50px;
+			}
+		}
+	}
+}
+
+.pagination {
+	&__button {
+		background-color: #82b3d3;
+		color: white;
+		&__active {
+			background-color: #f2f2f2;
+		}
+	}
+}
+
+.hotel-card {
+	border-radius: 8px;
+	transition: all 1250ms;
+	overflow: hidden;
+
+	&:hover {
+		transition: all 125ms;
+		transform: scale(1.05);
+		background: #e0e0e0;
+		cursor: pointer;
+	}
+	&__inner {
+		padding: 20px;
+	}
+	&__image {
+		max-width: 300px;
+		transition: transform 250ms;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	&__name {
+		font-family: ptsans_bold, serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 31px;
+		margin-top: 16px;
+	}
+	&__describe {
+		display: flex;
+		font-size: 18px;
+		div:first-child {
+			width: 160px;
+		}
+		margin-top: 16px;
+	}
+	&__button {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 16px;
+			& button {
+				border: none;
+				transition: transform 250ms;
+				&:hover {
+					transform: scale(1.05);
+					cursor: pointer;
+				}
+			}
+		}
+		&__more {
+			width: 133.01px;
+			height: 37px;
+			background: #756257;
+			border-radius: 4px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 21px;
+			text-align: center;
+			text-transform: uppercase;
+			color: #ffffff;
+		}
+		&__favorite {
+			width: 140.94px;
+			height: 37px;
+			background: #82b3d3;
+			border-radius: 4px;
+
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 21px;
+			text-align: center;
+			text-transform: uppercase;
+
+			/* basic/white */
+
+			color: #ffffff;
+		}
+	}
+	&__rating {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-top: 16px;
+		}
+		&__text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 160px;
+			height: 38px;
+
+			background: #f2f2f2;
+			border-radius: 4px;
+			font-family: ptsans_regular, serif;
+			font-style: normal;
+			font-size: 16px;
+			line-height: 21px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	&__stars {
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 38px;
+		}
+	}
+	&__star {
+		height: 17px;
+		margin-right: 7px;
+		&:hover {
+			transform: scale(1.3);
+		}
+	}
+}

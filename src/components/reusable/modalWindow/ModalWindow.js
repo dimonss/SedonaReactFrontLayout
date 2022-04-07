@@ -10,13 +10,8 @@ const ModalWindow = (props) => {
 	return (
 		props.isOpen &&
 		ReactDOM.createPortal(
-			<div
-				className="modal-window"
-				onClick={() => {
-					console.log("!!");
-				}}
-			>
-				{/*<div className="modal-window__overlay" onClick={() => props.setIsOpen(false)}>*/}
+			<div className="modal-window">
+				{/*<div className="modal-window__overlay" onClick={() => props.setIsOpen(false)}>TODO outsida click*/}
 				<div className="modal-window__overlay">{childrenWithProps}</div>
 			</div>,
 			modalRoot

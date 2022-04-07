@@ -6,7 +6,10 @@ const ToastStore = () => {
 	const toastData = useSelector((state) => state?.ui?.toast);
 	return (
 		toastData && (
-			<div className="alert" style={{ display: "flex", justifyContent: "center", position: "fixed", bottom: "100px", width: "100%" }}>
+			<div
+				className="alert"
+				style={{ display: "flex", justifyContent: "center", position: "fixed", bottom: "100px", left: 0, right: 0 }}
+			>
 				<Alert severity={toastData.type}>{toastData.message}</Alert>
 			</div>
 		)

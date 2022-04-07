@@ -64,7 +64,14 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		& button {
+			transition: all 250ms;
 			cursor: pointer;
+			&:hover {
+				transform: scale(1.05);
+			}
+			&:active {
+				transform: scale(0.95);
+			}
 		}
 		& .apply {
 			width: 160px;

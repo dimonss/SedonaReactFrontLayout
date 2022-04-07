@@ -1,0 +1,40 @@
+
+.dropdown {
+	position: relative;
+	height: 48px;
+	margin-bottom: 12px;
+	background: white;
+	min-width: 130px;
+	&:active{
+		svg{
+		transform: rotate(180deg);}
+	}
+
+	&__control {
+		select {
+			padding-left: 19px;
+			width: 100%;
+			height: 56px;
+			border: 2px solid #E6E6E6;
+			box-sizing: border-box;
+			border-radius: 4px;
+			-webkit-appearance: none;
+			background: white;
+			transition: all 125ms;
+			font-size: 18px;
+
+			&:focus {
+				border: 2px solid #82b3d3;
+				outline: none;
+				-webkit-box-shadow: inset 0 0 0 1px #82b3d3;
+				box-shadow: inset 0 0 0 1px #82b3d3;
+			}
+		}
+		svg{
+			transition: transform 250ms;
+			position: absolute;
+			top: 25px;
+			right: 20px;
+		}
+	}
+}

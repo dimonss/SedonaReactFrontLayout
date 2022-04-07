@@ -44,6 +44,13 @@ const stringsRU = {
 	hotel_type: "Тип жилья",
 	from: "От",
 	to: "До",
+	get_more: "Загузить ещё",
+	more: "Подробнее",
+	to_favorites: "В избранное",
+	found: "Наидено",
+	hotel: "Гостинница",
+	rating: "Рейтинг",
+	hotels_on_page: "Гостинниц на странице",
 };
 
 export default stringsRU;

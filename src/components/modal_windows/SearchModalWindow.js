@@ -1,16 +1,14 @@
-import React, { useCallback, useState } from "react";
+import React, {useCallback, useState} from "react";
 import "./search_modal_window.scss";
 import ModalWinodow from "../reusable/modalWindow/ModalWindow";
 import stringsRU from "../../strings/stringsRU";
 import xIcon from "../../images/button/X.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleModalWindow } from "../../store/actions/uiActions";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import {useDispatch, useSelector} from "react-redux";
+import {toggleModalWindow} from "../../store/actions/uiActions";
 import TextField from "@mui/material/TextField";
-import { DesktopDatePicker } from "@mui/lab";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import {DesktopDatePicker} from "@mui/lab";
+import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 import urls from "../../urls";
 
 const SearchModalWindow = () => {
@@ -37,32 +35,29 @@ const SearchModalWindow = () => {
 				<div className="search-modal-window__inner">
 					<div className="search-modal-window__title">{stringsRU.search_hotel_sedona}</div>
 					<div className="search-modal-window__inputs-container">
-						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DesktopDatePicker
-								label={stringsRU.arrival_data}
-								value={arrival_data}
-								minDate={new Date("2017-01-01")}
-								onChange={(newValue) => {
-									setArrival_data(newValue);
-								}}
-								renderInput={(params) => <TextField {...params} />}
-								date={null}
-								rawValue={null}
-								openPicker={null}
-							/>
-							<DesktopDatePicker
-								label={stringsRU.departure_data}
-								value={departure_data}
-								minDate={new Date("2017-01-01")}
-								onChange={(newValue) => {
-									setDeparture_data(newValue);
-								}}
-								renderInput={(params) => <TextField {...params} />}
-								date={null}
-								rawValue={null}
-								openPicker={null}
-							/>
-						</LocalizationProvider>
+						<DesktopDatePicker
+							label={stringsRU.arrival_data}
+							value={arrival_data}
+							minDate={new Date("2017-01-01")}
+							onChange={(newValue) => {
+								setArrival_data(newValue);
+							}}
+							renderInput={(params) => <TextField {...params} />}
+							date={}
+							rawValue={}
+						 openPicker={}/>
+						<DesktopDatePicker
+							label={stringsRU.departure_data}
+							value={departure_data}
+							minDate={new Date("2017-01-01")}
+							onChange={(newValue) => {
+								setDeparture_data(newValue);
+							}}
+							renderInput={(params) => <TextField {...params} />}
+							date={}
+							rawValue={}
+							openPicker={}
+						/>
 						<div className="search-modal-window__container__amount-selectors">
 							<FormControl sx={{ m: 1, minWidth: 80 }}>
 								<InputLabel id="demo-simple-select-autowidth-label">{stringsRU.adults}</InputLabel>
